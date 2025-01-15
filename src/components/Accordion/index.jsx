@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
-import { type } from 'os';
 
 const AccordionItem = ({ isHeader, isFooter, title, content, isOpen, onToggle, hideToggle, isProductAndServices }) => {
   const mappedData = ['Types', 'Materials', 'Compliance Standards', 'Fasteners and Gaskets',"Pipes and Tubes","Fittings","Coating Options","Sizes Available","Standards Compliance","Acidizing and Cementing Products"];
