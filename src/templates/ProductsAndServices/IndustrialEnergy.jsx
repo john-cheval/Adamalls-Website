@@ -5,7 +5,6 @@ import ChooseAdamallys from '@/components/choose-adamallys/choose-adamallys'
 import OtherServices from "@/components/other-services-slider/OtherServices"
 
 const IndustrialEnergy = (props) => {
-  console.log(props,"Hello from Industrial Energy Page");
   
   const { title, info, video_title, Video, Our_Key_Product_Offerings, OtherServices: otherServicesData } = props;
   const data = Our_Key_Product_Offerings?.map?.((offer) => (

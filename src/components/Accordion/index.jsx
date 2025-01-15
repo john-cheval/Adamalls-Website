@@ -1,8 +1,33 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
+import { type } from 'os';
 
 const AccordionItem = ({ isHeader, isFooter, title, content, isOpen, onToggle, hideToggle, isProductAndServices }) => {
+  const mappedData = ['Types', 'Materials', 'Compliance Standards', 'Fasteners and Gaskets',"Pipes and Tubes","Fittings"];
+  
+  const renderContent = () => {
+    if(typeof content === 'string'){
+    const splittedData = content.split('\n');
+      return splittedData.map((line, index) => {
+        const keyword = mappedData.find(keyword => line.startsWith(keyword));
+        if (keyword) {
+          const [key, value] = line.split(': ');
+          return (
+            <div key={index}>
+              <p>{key}:<span>{value}</span></p>
+            </div>
+          );
+        } else if (line.trim() !== '') {
+          return <p key={index}>{line}</p>;
+        }
+        return null;
+      });
+    }
+    
+  };
+  
+ 
   return (
     <div className={`${isFooter && 'pb-3'} border-b border-[#8B8B8B80]`}>
       <button
@@ -31,7 +56,8 @@ const AccordionItem = ({ isHeader, isFooter, title, content, isOpen, onToggle, h
       </button>
       {isOpen && (
         <div className={`${isProductAndServices ? "pb-[18px] lg:pb-[30px]" : isHeader ? "" : hideToggle ? "pb-[17px] pt-4 md:pt-0" : "pt-[14px] pb-6 px-4"}`}>
-          <div className='font_calibri font-light text-[12px] md:text-lg'>{content}</div>
+          {/* <div className='font_calibri font-light text-[12px] md:text-lg'> {content}</div> */}
+          <div className='font_calibri font-light text-[12px] md:text-lg'> {renderContent()}</div>
         </div>
       )}
     </div>

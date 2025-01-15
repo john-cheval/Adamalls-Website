@@ -12,6 +12,7 @@ import ThreeColumnContent from "@/components/three-column-content/three-column-c
 const TechnicalMarineStoresTemplate = (props) => {
   const { banner_background_image, banner_info, banner_title, Tags: tags, Card, OtherServices: otherServicesData } = props;
   const tagList = tags?.map(({ list }) => list);
+
   return (
     <>
       <ShipSupplyHeading />
@@ -30,6 +31,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[0]?.info}
         image={Card?.[0]?.image?.data?.attributes?.url}
         points={Card?.[0]?.lists?.map(({ list }) => list)}
+        link={Card?.[0]?.link}
       />
       <TwoColumnContent
         invert
@@ -39,6 +41,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[1]?.info}
         image={Card?.[1]?.image?.data?.attributes?.url}
         points={Card?.[1]?.lists?.map(({ list }) => list)}
+        link={Card?.[1]?.link}
       />
       <ThreeColumnContent
         id={tagList[2]}
@@ -47,6 +50,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         image1={Card?.[2]?.image?.data?.attributes?.url}
         points={Card?.[2]?.lists?.map(({ list }) => list)}
         image2={Card?.[2]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/cabin-stores-two.png"}
+        link={Card?.[2]?.link}
       />
       <TwoColumnContent
         bgGray
@@ -57,6 +61,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[3]?.info}
         image={Card?.[3]?.image?.data?.attributes?.url}
         points={Card?.[3]?.lists?.map(({ list }) => list)}
+        link={Card?.[3]?.link}
+
       />
       <OneColumnContent
         leftTitle
@@ -65,6 +71,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[4]?.info}
         image={Card?.[4]?.image?.data?.attributes?.url}
         points={Card?.[4]?.lists?.map(({ list }) => list)}
+        link={Card?.[4]?.link}
       />
       <TwoColumnContent
         bgGray
@@ -73,6 +80,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[5]?.info}
         image={Card?.[5]?.image?.data?.attributes?.url}
         points={Card?.[5]?.lists?.map(({ list }) => list)}
+        link={Card?.[5]?.link}
+
       />
       <TwoColumnContent
         bgGray
@@ -82,6 +91,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[6]?.info}
         image={Card?.[6]?.image?.data?.attributes?.url}
         points={Card?.[6]?.lists?.map(({ list }) => list)}
+        link={Card?.[6]?.link}
+
       />
       <ThreeColumnContent
         id={tagList[7]}
@@ -90,6 +101,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         image1={Card?.[7]?.image?.data?.attributes?.url}
         points={Card?.[7]?.lists?.map(({ list }) => list)}
         image2={Card?.[7]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/safety-stores-image2.png"}
+        link={Card?.[7]?.link}
+
       />
       <TwoColumnContent
         id={tagList[8]}
@@ -97,6 +110,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[8]?.info}
         image={Card?.[8]?.image?.data?.attributes?.url}
         points={Card?.[8]?.lists?.map(({ list }) => list)}
+        link={Card?.[8]?.link}
+
       />
       <ThreeColumnContent
         id={tagList[9]}
@@ -105,6 +120,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         image1={Card?.[9]?.image?.data?.attributes?.url}
         points={Card?.[9]?.lists?.map(({ list }) => list)}
         image2={Card?.[9]?.Secound_Image?.data?.attributes?.url || "/images/ship-supply/stationary-two.png"}
+        link={Card?.[9]?.link}
+
       />
       <OneColumnContent
         id={tagList[10]}
@@ -112,21 +129,27 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[10]?.info}
         image={Card?.[10]?.image?.data?.attributes?.url}
         points={Card?.[10]?.lists?.map(({ list }) => list)}
+        link={Card?.[10]?.link}
+
       />
       <div className="hidden md:block" id={tagList[12]}>
         <GridContent
           id={tagList[11]}
+          
           data={[
             {
               bgGray: true,
               title: Card?.[11]?.title,
               caption: Card?.[11]?.info,
               points: Card?.[11]?.lists?.map(({ list }) => list),
+              link: Card?.[11]?.link,
+
             },
             {
               title: Card?.[12]?.title,
               caption: Card?.[12]?.info,
               points: Card?.[12]?.lists?.map(({ list }) => list),
+              link: Card?.[12]?.link,
             }
           ]}
           images={[Card?.[11]?.image?.data?.attributes?.url, Card?.[12]?.image?.data?.attributes?.url]}
@@ -140,6 +163,8 @@ const TechnicalMarineStoresTemplate = (props) => {
           caption={Card?.[11]?.info}
           image={Card?.[11]?.image?.data?.attributes?.url}
           points={Card?.[11]?.lists?.map(({ list }) => list)}
+          link={Card?.[11]?.link}
+
         />
         <TwoColumnContent
           id={tagList[12]}
@@ -147,6 +172,8 @@ const TechnicalMarineStoresTemplate = (props) => {
           caption={Card?.[12]?.info}
           image={Card?.[12]?.image?.data?.attributes?.url}
           points={Card?.[12]?.lists?.map(({ list }) => list)}
+         link={Card?.[12]?.link}
+
         />
       </div>
       <TwoColumnContent
@@ -158,6 +185,8 @@ const TechnicalMarineStoresTemplate = (props) => {
         caption={Card?.[13]?.info}
         image={Card?.[13]?.image?.data?.attributes?.url}
         points={Card?.[13]?.lists?.map(({ list }) => list)}
+        link={Card?.[13]?.link}
+
       />
       <ChooseAdamallys />
       <OtherServices {...otherServicesData} />

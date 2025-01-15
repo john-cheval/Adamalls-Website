@@ -1,8 +1,17 @@
+"use client"
 import Image from 'next/image'
 import LiBold from '../LiBold';
+import { useRouter } from 'next/navigation';
 
 const GridContent = (props) => {
   const { id, data, images } = props;
+  const router = useRouter()
+  const handleClick = (title) => {
+    const filteredData =data.filter((item)=>item.title === title)
+   if(filteredData.length > 0){
+     router.push(filteredData[0]?.link)
+   }
+  }
 
   return (
     <section id={id} className={`container mx-auto flex flex-col mb-4 gap-4 px-3 xl:px-0`}>
@@ -42,7 +51,7 @@ const GridContent = (props) => {
               }
             </div>
             <div>
-              <button className={`flex items-center text-xs justify-between md:text-base gap-6 ${bgGray ? "bg-theme-main text-white" : "bg-white text-theme-main"} py-[13px] px-[24px] font_calibri rounded-full`}>
+              <button onClick={()=> handleClick(title)} className={`flex items-center text-xs justify-between md:text-base gap-6 ${bgGray ? "bg-theme-main text-white" : "bg-white text-theme-main"} py-[13px] px-[24px] font_calibri rounded-full`}>
                 <span>View Products</span>
                 <Image src={bgGray ? '/svg/arrow_forward.svg' : '/svg/arrow_next.svg'} alt='arrow_next' width={16} height={16} />
               </button>
