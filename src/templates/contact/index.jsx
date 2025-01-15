@@ -37,12 +37,27 @@ const ContactTemplate = (props) => {
     console.log(formData);
   };
 
+  const Buttons =[
+    {
+    label:"Visit Our ShipServ Page",
+    Link: "https://www.shipserv.com/supplier/profile/s/adamallys-llc-59590"
+  },
+    {
+    label:"MESPAS ID: SSM-N3X",
+    Link: "https://sbm.mespas.com/landing"
+  },
+    {
+    label:"ProcureShip ID: 440",
+    Link: "https://procureship.com/"
+  },
+]
   return (
     <main
       className='mt-[4rem] md:mt-[8rem]'
       style={{ overflowX: 'hidden' }}
     >
-      <div className="flex flex-col lg:flex-row container mx-auto z-[1] relative">
+      <div className="flex flex-col  container mx-auto z-[1] relative">
+        <div className='flex flex-col lg:flex-row'>
         <div className="basis-full md:min-w-[471px] md:basis-[40%] px-[18px] md:px-[30px] pt-[51px] pb-[42px] sm:px-[62px] sm:pt-[68px] sm:pb-[76px]  bg-theme-main">
           <h1 className='font_calibri text-white font-bold text-[30px] md:text-[60px] leading-[30px] md:leading-[62px] mb-6'>Contact</h1>
           <div className="flex gap-[11px] text-white">
@@ -142,6 +157,16 @@ const ContactTemplate = (props) => {
             </div>
           </form>
         </div>
+        </div>
+        <div className='bg-[#4A51A2] px-2 py-8 flex gap-2 flex-wrap justify-center lg:gap-4'>
+             {Buttons?.map((item, idx) => (
+               <a target="_blank" href={item?.Link || "#"} key={idx}>
+                    <button className="py-[6px] font_calibri font-semibold px-4 sm:px-[30px] border border[#FFFFFF] text-[#FFFFFF] leading-[32px] rounded-full w-[242px]">
+                  {item?.label}
+                  </button>
+               </a>
+  ))}
+</div>
       </div>
       <div className="mt-[-70px] z-[0] relative">
         <MapComponent />
