@@ -12,7 +12,7 @@ const SustainabilityTemplate = (props) => {
         </h1>
         <div className='w-[49px] h-[2px] bg-[#8B8B8B] md:hidden mx-auto mt-2 mb-6' />
       </div>
-      <div
+      {/* <div
         style={{
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -31,7 +31,29 @@ const SustainabilityTemplate = (props) => {
             {BannerContent}
           </p>
         </div>
-      </div>
+      </div> */}
+      <div
+  style={{
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${BannerImage?.data?.[0]?.attributes?.url})`,
+  }}
+  className={`w-full max-w-[100%] relative h-[615px] flex flex-col justify-end items-center`}
+>
+  <div
+    style={{ background: 'linear-gradient(to top right, rgba(23, 31, 124, 1), rgba(23, 31, 124, 0))' }}
+    className="absolute bottom-0 h-[364px] w-full"
+  />
+  <div
+    style={{ background: 'rgba(23, 31, 124, 0.8)' }}
+    className="absolute bottom-0 text-white w-full px-6 py-5 sm:px-9 sm:py-8 lg:px-[53px] lg:pb-[80px]"
+  >
+    <p className="text-[16px] mx-auto max-w-[815px] text-center sm:text-[18px] font_calibri font-light">
+      {BannerContent}
+    </p>
+  </div>
+   </div>
       <div className="sticky top-20 mt-[10px]">
         <TwoColumnContent
           zeroGap
