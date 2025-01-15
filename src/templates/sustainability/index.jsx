@@ -32,7 +32,7 @@ const SustainabilityTemplate = (props) => {
           </p>
         </div>
       </div>
-      <div className="sticky top-20 mt-[40px]">
+      <div className="sticky top-20 mt-[40px] z-0">
         <TwoColumnContent
           zeroGap
           hideButton

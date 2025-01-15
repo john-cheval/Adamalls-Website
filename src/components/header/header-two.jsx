@@ -11,10 +11,11 @@ const HeaderTwo = ({ data, slideFromTop }) => {
   const { Button, Secound_Header_Nav, Logo } = data;
   const pathname = usePathname()
   const scrollPosition = useScrollPosition()
+  
 
   return (
     <header className={`py-3 w-full fixed z-[200] hidden xl:block transition-all duration-500 ease-linear text-theme-main font_calibri bg-white 
-      ${slideFromTop ? (scrollPosition > 100 ? "top-0" : "-top-[200px]") : "top-0"}
+      ${/* slideFromTop ?  */(scrollPosition > 100 ? "top-0 opacity-1" : "-top-[200px] opacity-0 ") /* : "top-0 opacity-1" */}
     `}>
       <div className="container mx-auto">
         <div className="flex justify-between items-center gap-4">
