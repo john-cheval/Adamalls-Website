@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import GridBanner from '@/components/hero/grid-banner'
 import Milestones from '@/components/milestones/Milestones'
+import Platforms from "@/components/Platoforms"
 import ChooseAdamallys from '@/components/choose-adamallys/choose-adamallys'
 import OtherServices from "@/components/other-services-slider/OtherServices"
 import modifyImageUrl from "@/utils/modifyImageUrl"
@@ -17,7 +18,7 @@ const renderRichText = (blocks) => {
     );
   });
 };
-
+ 
 const ShipSupply = (props) => {
   const { title, content, Product_and_service, milestones, OtherServices: otherServicesData } = props;
 
@@ -79,6 +80,7 @@ const ShipSupply = (props) => {
           </div>
         </div>
       </section>
+      <Platforms/>
       <Milestones data={milestones} />
       <ChooseAdamallys />
       <OtherServices {...otherServicesData} />
