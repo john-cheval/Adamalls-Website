@@ -72,7 +72,7 @@ const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
       
 
 
-      <div className="mt-10 md:my-[68px] flex webkit-flex webkit-wrap flex-wrap gap-[24px]">
+      <div className="mt-10 md:my-[68px] px-2 flex webkit-flex webkit-wrap flex-wrap gap-[24px]">
   {
     data?.map((distributor, index) =>
       <div key={distributor?.title} className="basis-full flex-1 lg:basis-[40%] relative border border-[#B2B6E0] flex flex-col min-h-[360px]">
@@ -89,11 +89,11 @@ const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
             </div>
           </div>
           <div className="flex-1 pt-[42px] pl-[64px] pr-[57px] flex flex-col">
-            <p className="text-theme-main font-bold text-lg text-center md:text-left md:text-[30px] leading-[44px] mb-3">{distributor?.title}</p>
+            <p className="text-theme-main font-bold text-lg text-center md:text-left md:text-[30px] leading-[44px] md:mb-3">{distributor?.title}</p>
             <div className="flex-grow mb-10 flex webkit-flex flex-col flex-dir-col justify-center md:justify-start md:items-start">
               <p
                 ref={(el) => descriptionRefs.current[index] = el}
-                className={`text-[#3E3E3E] font_calibri text-center md:text-left text-xs inline-block font-light md:text-lg leading-[26px] ${expanded[distributor.title] ? '' : 'truncate'}`}
+                className={`text-[#3E3E3E] font_calibri text-center md:text-left text-xs inline-block font-light md:text-lg leading-[15px] md:leading-[26px] ${expanded[distributor.title] ? '' : 'truncate'}`}
                 style={{
                   whiteSpace: 'wrap',
                   maxHeight: expanded[distributor.title] ? 'none' : '140px',
@@ -118,8 +118,8 @@ const DistributorsAndStockistsTemplate = ({ Cards, Banner }) => {
         </div>
         <div className="border-t border-t-[#B2B6E0]"></div>
         <div className="flex webkit-flex justify-center gap-8 py-4  items-center mt-1 mb-1">
-          <a className='whitespace-nowrap font_calibri bg-white text-sm md:text-lg font-bold leading-[26px] text-theme-main py-4 px-[65px] border border-[#B2B6E0] rounded-[30px]' href={distributor?.link} target='_blank'>Visit Website</a>
-          <a className='whitespace-nowrap font_calibri bg-white text-sm md:text-lg font-bold leading-[26px] text-theme-main py-4 px-[65px] border border-[#B2B6E0] rounded-[30px]' href="mailto:adamallys@adamallys-llc.com" target='_self'>Enquire Now</a>
+          <a className='whitespace-nowrap font_calibri text-xs bg-white  md:text-lg font-bold leading-[26px] text-theme-main py-4 px-[30px] md:px-[65px] border border-[#B2B6E0] rounded-[30px]' href={distributor?.link} target='_blank'>Visit Website</a>
+          <a className='whitespace-nowrap font_calibri bg-white text-xs md:text-lg font-bold leading-[26px] text-theme-main py-4 px-[30px] md:px-[65px] border border-[#B2B6E0] rounded-[30px]' href="mailto:adamallys@adamallys-llc.com" target='_self'>Enquire Now</a>
         </div>
       </div>
     )
