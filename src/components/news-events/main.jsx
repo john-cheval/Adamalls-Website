@@ -10,12 +10,7 @@ function Main({ news }) {
           <h1 className="mt-[25px] md:mt-0 mb-3 md:mb-0 text-[25px] md:text-[60px] font-[700] text-[#2E368F] text-center md:text-left">
             News & Events
           </h1>
-          <div className="hidden text-[#2E368F] md:flex items-center gap-2 border px-4 py-2 md:px-5 md:py-3 border-[#2E368F]">
-            <MdCalendarMonth />
-            <Link href="#" className="text-[14px] md:text-[16px]">
-              Date by filter
-            </Link>
-          </div>
+          {/* j */}
         </div>
 
         <div className="flex flex-col xl:flex-row gap-5 items-center">
