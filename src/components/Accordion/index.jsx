@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { type } from 'os';
 
 const AccordionItem = ({ isHeader, isFooter, title, content, isOpen, onToggle, hideToggle, isProductAndServices }) => {
-  const mappedData = ['Types', 'Materials', 'Compliance Standards', 'Fasteners and Gaskets',"Pipes and Tubes","Fittings"];
+  const mappedData = ['Types', 'Materials', 'Compliance Standards', 'Fasteners and Gaskets',"Pipes and Tubes","Fittings","Coating Options","Sizes Available","Standards Compliance","Acidizing and Cementing Products"];
   
   const renderContent = () => {
     if(typeof content === 'string'){
@@ -15,7 +15,7 @@ const AccordionItem = ({ isHeader, isFooter, title, content, isOpen, onToggle, h
           const [key, value] = line.split(': ');
           return (
             <div key={index}>
-              <p>{key}:<span>{value}</span></p>
+              <p className='font_calibri font-bold text-lg'>{key}:<span className='font-[300] ml-2'>{value}</span></p>
             </div>
           );
         } else if (line.trim() !== '') {
