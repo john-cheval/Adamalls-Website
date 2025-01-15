@@ -7,7 +7,6 @@ import SingleWrapperTwoColumnContent from '@/components/single-wrapper-two-colum
 
 const ProvisionsAndBondedStoresTemplate = (props) => {
   const { banner_background_image, banner_info, banner_title, Cards, OtherServices: otherServicesData } = props;
-
   return (
     <>
       <ShipSupplyHeading />
@@ -26,7 +25,7 @@ const ProvisionsAndBondedStoresTemplate = (props) => {
           title={Cards?.[0]?.title}
           caption={Cards?.[0]?.info}
           images={[Cards?.[0]?.Image?.data?.attributes?.url]}
-          link={Cards?.[0]?.link}
+          link={Cards?.[0]?.Link}
         />
         <SingleWrapperTwoColumnContent
           isGradientBg
@@ -34,7 +33,6 @@ const ProvisionsAndBondedStoresTemplate = (props) => {
           title={Cards?.[1]?.title}
           caption={Cards?.[1]?.info}
           images={[Cards?.[1]?.Image?.data?.attributes?.url]}
-          link={Cards?.[1]?.link}
         />
       </div>
       <ChooseAdamallys />

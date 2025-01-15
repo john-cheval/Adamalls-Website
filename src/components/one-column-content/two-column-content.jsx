@@ -7,8 +7,9 @@ const OneColumnContent = (props) => {
   const { id, leftTitle, title, caption, image, points,link } = props;
   const router = useRouter()
   const handleClick = () => {
-    router.push(link)
-    console.log("onClick")
+    if(link){
+      router.push(link)
+    }
   }
 
   return (

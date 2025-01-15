@@ -8,6 +8,7 @@ import ShipSupplyHeading from '@/components/ShipSupplyHeading'
 
 const ShipSparePartsTemplate = (props) => {
   const { Why_Choose_Image, Why_Choose_Title, Why_Choose_Info, banner_background_image, banner_Info, banner_title, Cards, OtherServices: otherServicesData } = props;
+  // console.log(Cards[0].link)
 
   return (
     <>
@@ -26,6 +27,7 @@ const ShipSparePartsTemplate = (props) => {
           caption={Cards?.[0]?.info}
           image={Cards?.[0]?.image?.data?.attributes?.url}
           points={Cards?.[0]?.lists?.map(({ list }) => list)}
+          link={Cards?.[0]?.link}
         />
       </div>
       <TwoColumnContent
@@ -35,12 +37,14 @@ const ShipSparePartsTemplate = (props) => {
         caption={Cards?.[1]?.info}
         image={Cards?.[1]?.image?.data?.attributes?.url}
         points={Cards?.[1]?.lists?.map(({ list }) => list)}
+        link={Cards?.[1]?.link}
       />
       <TwoColumnContent
         title={Cards?.[2]?.title}
         caption={Cards?.[2]?.info}
         image={Cards?.[2]?.image?.data?.attributes?.url}
         points={Cards?.[2]?.lists?.map(({ list }) => list)}
+        link={Cards?.[2]?.link}
       />
       <TwoColumnContent
         bgGray
@@ -49,6 +53,7 @@ const ShipSparePartsTemplate = (props) => {
         caption={Cards?.[3]?.info}
         image={Cards?.[3]?.image?.data?.attributes?.url}
         points={Cards?.[3]?.lists?.map(({ list }) => list)}
+        link={Cards?.[3]?.link}
       />
       <OneColumnContent
         leftTitle
@@ -56,6 +61,7 @@ const ShipSparePartsTemplate = (props) => {
         caption={Cards?.[4]?.info}
         image={Cards?.[4]?.image?.data?.attributes?.url}
         points={Cards?.[4]?.lists?.map(({ list }) => list)}
+        link={Cards?.[4]?.link}
       />
       <TwoColumnContent
         bgGray
@@ -64,6 +70,7 @@ const ShipSparePartsTemplate = (props) => {
         caption={Cards?.[5]?.info}
         image={Cards?.[5]?.image?.data?.attributes?.url}
         points={Cards?.[5]?.lists?.map(({ list }) => list)}
+        link={Cards?.[5]?.link}
       />
       <TwoColumnContent
         bgGray
@@ -71,6 +78,8 @@ const ShipSparePartsTemplate = (props) => {
         caption={Cards?.[6]?.info}
         image={Cards?.[6]?.image?.data?.attributes?.url}
         points={Cards?.[6]?.lists?.map(({ list }) => list)}
+        link={Cards?.[6]?.link}
+
       />
       <ChooseAdamallys
         {...{ title: Why_Choose_Title, image: Why_Choose_Image?.data?.attributes?.url, description: Why_Choose_Info }}

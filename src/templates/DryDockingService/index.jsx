@@ -7,7 +7,6 @@ import ShipSupplyHeading from '@/components/ShipSupplyHeading'
 
 const DryDockingServiceTemplate = (props) => {
   const { Why_Choose_Image, Why_Choose_Title, Why_Choose_info, banner_background_image, banner_info, banner_title, cards, OtherServices: otherServicesData } = props;
-
   return (
     <main className=''>
       <ShipSupplyHeading />
@@ -24,6 +23,7 @@ const DryDockingServiceTemplate = (props) => {
           title={cards?.[0]?.title}
           image={cards?.[0]?.Icon?.data?.attributes?.url}
           caption={cards?.[0]?.info}
+          link={cards?.[0]?.link}
         />
       </div>
       <TwoColumnContent
@@ -32,11 +32,15 @@ const DryDockingServiceTemplate = (props) => {
         title={cards?.[1]?.title}
         image={cards?.[1]?.Icon?.data?.attributes?.url}
         caption={cards?.[1]?.info}
+        link={cards?.[1]?.link}
+
       />
       <TwoColumnContent
         title={cards?.[2]?.title}
         image={cards?.[2]?.Icon?.data?.attributes?.url}
         caption={cards?.[2]?.info}
+        link={cards?.[2]?.link}
+
       />
       <TwoColumnContent
         bgGray
@@ -44,6 +48,7 @@ const DryDockingServiceTemplate = (props) => {
         title={cards?.[3]?.title}
         image={cards?.[3]?.Icon?.data?.attributes?.url}
         caption={cards?.[3]?.info}
+        link={cards?.[3]?.link}
       />
       <ChooseAdamallys
         {...{ title: Why_Choose_Title, image: Why_Choose_Image?.data?.attributes?.url, description: Why_Choose_info }}

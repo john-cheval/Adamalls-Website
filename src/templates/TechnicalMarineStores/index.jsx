@@ -13,6 +13,7 @@ const TechnicalMarineStoresTemplate = (props) => {
   const { banner_background_image, banner_info, banner_title, Tags: tags, Card, OtherServices: otherServicesData } = props;
   const tagList = tags?.map(({ list }) => list);
 
+// console.log(Card?.[2].link)
   return (
     <>
       <ShipSupplyHeading />
@@ -43,7 +44,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         points={Card?.[1]?.lists?.map(({ list }) => list)}
         link={Card?.[1]?.link}
       />
-      <ThreeColumnContent
+       <ThreeColumnContent
         id={tagList[2]}
         title={Card?.[2]?.title}
         caption={Card?.[2]?.info}
@@ -83,7 +84,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[5]?.link}
 
       />
-      <TwoColumnContent
+     <TwoColumnContent
         bgGray
         invert
         id={tagList[6]}
@@ -104,7 +105,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[7]?.link}
 
       />
-      <TwoColumnContent
+     <TwoColumnContent
         id={tagList[8]}
         title={Card?.[8]?.title}
         caption={Card?.[8]?.info}
@@ -113,7 +114,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[8]?.link}
 
       />
-      <ThreeColumnContent
+        <ThreeColumnContent
         id={tagList[9]}
         title={Card?.[9]?.title}
         caption={Card?.[9]?.info}
@@ -123,7 +124,7 @@ const TechnicalMarineStoresTemplate = (props) => {
         link={Card?.[9]?.link}
 
       />
-      <OneColumnContent
+     <OneColumnContent
         id={tagList[10]}
         title={Card?.[10]?.title}
         caption={Card?.[10]?.info}
@@ -189,7 +190,7 @@ const TechnicalMarineStoresTemplate = (props) => {
 
       />
       <ChooseAdamallys />
-      <OtherServices {...otherServicesData} />
+      <OtherServices {...otherServicesData} /> 
     </>
   )
 }

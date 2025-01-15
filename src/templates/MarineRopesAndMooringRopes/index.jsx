@@ -7,7 +7,7 @@ import ShipSupplyHeading from '@/components/ShipSupplyHeading'
 
 const MarineRopesAndMooringRopesTemplate = (props) => {
   const { Why_Choose_Image, Why_Choose_Title, Why_Choose_info, banner_background_image, banner_info, banner_title, Card, OtherServices: otherServicesData } = props;
-  console.log('Card?.[0]?.Images?.data', Card?.[0]?.Images?.data);
+  // console.log('Card?.[0]?.Images?.data', Card?.[0]?.Images?.data);
 
   return (
     <>
